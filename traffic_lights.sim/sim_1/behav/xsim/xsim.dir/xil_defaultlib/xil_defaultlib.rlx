@@ -1,0 +1,8 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Vivado/traffic_lights/traffic_lights.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/Vivado/traffic_lights/traffic_lights.srcs/sim_1/new/TrafficLights_TestBench.v,1591614205,verilog,,,,TrafficLights_TestBench,,,,,,,,
+C:/Vivado/traffic_lights/traffic_lights.srcs/sources_1/new/CounterDesign.v,1591613821,verilog,,C:/Vivado/traffic_lights/traffic_lights.srcs/sources_1/new/TrafficLightsDesign.v,,CounterDesign,,,,,,,,
+C:/Vivado/traffic_lights/traffic_lights.srcs/sources_1/new/TrafficLightsDesign.v,1591613998,verilog,,C:/Vivado/traffic_lights/traffic_lights.srcs/sim_1/new/TrafficLights_TestBench.v,,TrafficLightsDesign,,,,,,,,
