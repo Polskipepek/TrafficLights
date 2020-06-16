@@ -1,0 +1,421 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x206A6257B7062690",
+      "device": "xc7z020clg400-3",
+      "name": "design_tf",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "TrafficLights_0": "",
+      "top_diode_0": "",
+      "top_diode_1": "",
+      "top_diode_2": "",
+      "top_diode_3": "",
+      "bin2digit2_0": "",
+      "bin2digit2_1": "",
+      "lightstoleds_0": "",
+      "kcpsm6_0": "",
+      "decoder_0": "",
+      "mux2_1_0": "",
+      "pamiec_procesora_0": "",
+      "top_7LED_0": "",
+      "top_7LED_1": "",
+      "top_7LED_2": "",
+      "top_7LED_3": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "rst",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "design_tf_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "LEDs0": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "LEDs1": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "LEDs2": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "LEDs3": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "cathode0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "anode0": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "cathode1": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "cathode2": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "cathode3": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "anode1": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "anode2": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "anode3": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "ce": {
+        "direction": "I"
+      },
+      "greenLightTime": {
+        "direction": "I",
+        "left": "5",
+        "right": "0"
+      },
+      "enable": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "TrafficLights_0": {
+        "vlnv": "xilinx.com:user:TrafficLights:1.0",
+        "xci_name": "design_tf_TrafficLights_0_0"
+      },
+      "top_diode_0": {
+        "vlnv": "xilinx.com:user:top_diode:1.0",
+        "xci_name": "design_tf_top_diode_0_0"
+      },
+      "top_diode_1": {
+        "vlnv": "xilinx.com:user:top_diode:1.0",
+        "xci_name": "design_tf_top_diode_1_0"
+      },
+      "top_diode_2": {
+        "vlnv": "xilinx.com:user:top_diode:1.0",
+        "xci_name": "design_tf_top_diode_2_0"
+      },
+      "top_diode_3": {
+        "vlnv": "xilinx.com:user:top_diode:1.0",
+        "xci_name": "design_tf_top_diode_3_0"
+      },
+      "bin2digit2_0": {
+        "vlnv": "xilinx.com:user:bin2digit2:1.0",
+        "xci_name": "design_tf_bin2digit2_0_0"
+      },
+      "bin2digit2_1": {
+        "vlnv": "xilinx.com:user:bin2digit2:1.0",
+        "xci_name": "design_tf_bin2digit2_0_1"
+      },
+      "lightstoleds_0": {
+        "vlnv": "xilinx.com:user:lightstoleds:1.0",
+        "xci_name": "design_tf_lightstoleds_0_0"
+      },
+      "kcpsm6_0": {
+        "vlnv": "xilinx.com:user:kcpsm6:1.0",
+        "xci_name": "design_tf_kcpsm6_0_0"
+      },
+      "decoder_0": {
+        "vlnv": "xilinx.com:user:decoder:1.0",
+        "xci_name": "design_tf_decoder_0_0"
+      },
+      "mux2_1_0": {
+        "vlnv": "xilinx.com:user:mux2_1:1.0",
+        "xci_name": "design_tf_mux2_1_0_0"
+      },
+      "pamiec_procesora_0": {
+        "vlnv": "xilinx.com:user:pamiec_procesora:1.0",
+        "xci_name": "design_tf_pamiec_procesora_0_2"
+      },
+      "top_7LED_0": {
+        "vlnv": "xilinx.com:user:top_7LED:1.0",
+        "xci_name": "design_tf_top_7LED_0_4"
+      },
+      "top_7LED_1": {
+        "vlnv": "xilinx.com:user:top_7LED:1.0",
+        "xci_name": "design_tf_top_7LED_1_1"
+      },
+      "top_7LED_2": {
+        "vlnv": "xilinx.com:user:top_7LED:1.0",
+        "xci_name": "design_tf_top_7LED_2_1"
+      },
+      "top_7LED_3": {
+        "vlnv": "xilinx.com:user:top_7LED:1.0",
+        "xci_name": "design_tf_top_7LED_3_1"
+      }
+    },
+    "nets": {
+      "clk_1": {
+        "ports": [
+          "clk",
+          "TrafficLights_0/clk",
+          "top_diode_0/clk",
+          "top_diode_1/clk",
+          "top_diode_2/clk",
+          "top_diode_3/clk",
+          "kcpsm6_0/clk",
+          "mux2_1_0/clk",
+          "pamiec_procesora_0/clk",
+          "decoder_0/clk",
+          "top_7LED_3/clk",
+          "top_7LED_2/clk",
+          "top_7LED_0/clk",
+          "top_7LED_1/clk"
+        ]
+      },
+      "top_diode_0_LEDs": {
+        "ports": [
+          "top_diode_0/LEDs",
+          "LEDs0"
+        ]
+      },
+      "top_diode_1_LEDs": {
+        "ports": [
+          "top_diode_1/LEDs",
+          "LEDs1"
+        ]
+      },
+      "top_diode_2_LEDs": {
+        "ports": [
+          "top_diode_2/LEDs",
+          "LEDs2"
+        ]
+      },
+      "top_diode_3_LEDs": {
+        "ports": [
+          "top_diode_3/LEDs",
+          "LEDs3"
+        ]
+      },
+      "TrafficLights_0_timeLeftNS": {
+        "ports": [
+          "TrafficLights_0/timeLeftNS",
+          "bin2digit2_0/timeleftbin"
+        ]
+      },
+      "TrafficLights_0_timeLeftEW": {
+        "ports": [
+          "TrafficLights_0/timeLeftEW",
+          "bin2digit2_1/timeleftbin"
+        ]
+      },
+      "TrafficLights_0_lights": {
+        "ports": [
+          "TrafficLights_0/lights",
+          "lightstoleds_0/lights"
+        ]
+      },
+      "lightstoleds_0_lightNS": {
+        "ports": [
+          "lightstoleds_0/lightNS",
+          "top_diode_0/light",
+          "top_diode_2/light"
+        ]
+      },
+      "lightstoleds_0_lightEW": {
+        "ports": [
+          "lightstoleds_0/lightEW",
+          "top_diode_1/light",
+          "top_diode_3/light"
+        ]
+      },
+      "rst_1": {
+        "ports": [
+          "rst",
+          "TrafficLights_0/rst",
+          "kcpsm6_0/reset",
+          "mux2_1_0/rst",
+          "decoder_0/rst"
+        ]
+      },
+      "decoder_0_ce": {
+        "ports": [
+          "decoder_0/ce",
+          "TrafficLights_0/ce"
+        ]
+      },
+      "decoder_0_greenLightTime": {
+        "ports": [
+          "decoder_0/greenLightTime",
+          "TrafficLights_0/greenLightTime"
+        ]
+      },
+      "kcpsm6_0_address": {
+        "ports": [
+          "kcpsm6_0/address",
+          "pamiec_procesora_0/address"
+        ]
+      },
+      "pamiec_procesora_0_instruction": {
+        "ports": [
+          "pamiec_procesora_0/instruction",
+          "kcpsm6_0/instruction"
+        ]
+      },
+      "mux2_1_0_in_port": {
+        "ports": [
+          "mux2_1_0/in_port",
+          "kcpsm6_0/in_port"
+        ]
+      },
+      "kcpsm6_0_port_id": {
+        "ports": [
+          "kcpsm6_0/port_id",
+          "mux2_1_0/port_id",
+          "decoder_0/port_id"
+        ]
+      },
+      "kcpsm6_0_out_port": {
+        "ports": [
+          "kcpsm6_0/out_port",
+          "decoder_0/out_port"
+        ]
+      },
+      "kcpsm6_0_write_strobe": {
+        "ports": [
+          "kcpsm6_0/write_strobe",
+          "decoder_0/write_strobe"
+        ]
+      },
+      "greenLightTime_1": {
+        "ports": [
+          "greenLightTime",
+          "mux2_1_0/greenLightTime"
+        ]
+      },
+      "ce_1": {
+        "ports": [
+          "ce",
+          "mux2_1_0/ce"
+        ]
+      },
+      "top_7LED_0_cathode": {
+        "ports": [
+          "top_7LED_0/cathode",
+          "cathode0"
+        ]
+      },
+      "top_7LED_0_anode": {
+        "ports": [
+          "top_7LED_0/anode",
+          "anode1"
+        ]
+      },
+      "top_7LED_1_cathode": {
+        "ports": [
+          "top_7LED_1/cathode",
+          "cathode2"
+        ]
+      },
+      "top_7LED_1_anode": {
+        "ports": [
+          "top_7LED_1/anode",
+          "anode2"
+        ]
+      },
+      "top_7LED_2_cathode": {
+        "ports": [
+          "top_7LED_2/cathode",
+          "cathode1"
+        ]
+      },
+      "top_7LED_2_anode": {
+        "ports": [
+          "top_7LED_2/anode",
+          "anode0"
+        ]
+      },
+      "top_7LED_3_cathode": {
+        "ports": [
+          "top_7LED_3/cathode",
+          "cathode3"
+        ]
+      },
+      "top_7LED_3_anode": {
+        "ports": [
+          "top_7LED_3/anode",
+          "anode3"
+        ]
+      },
+      "bin2digit2_0_timeleft": {
+        "ports": [
+          "bin2digit2_0/timeleft",
+          "top_7LED_0/switch",
+          "top_7LED_2/switch"
+        ]
+      },
+      "bin2digit2_1_timeleft": {
+        "ports": [
+          "bin2digit2_1/timeleft",
+          "top_7LED_3/switch",
+          "top_7LED_1/switch"
+        ]
+      },
+      "enable_1": {
+        "ports": [
+          "enable",
+          "pamiec_procesora_0/enable"
+        ]
+      }
+    }
+  }
+}

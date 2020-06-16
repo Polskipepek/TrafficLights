@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../traffic_lights.ip_user_files/bd/design_tf/ipshared/7184/src/kcpsm6.vhd" \
+"../../../../traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_kcpsm6_0_0/sim/design_tf_kcpsm6_0_0.vhd" \
+
+# Do not sort compile order
+nosort

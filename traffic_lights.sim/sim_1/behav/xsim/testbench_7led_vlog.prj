@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../traffic_lights.srcs/sources_1/new/BCD_control.v" \
+"../../../../traffic_lights.srcs/sources_1/new/BCD_to_cathodes.v" \
+"../../../../traffic_lights.srcs/sources_1/new/anode_control.v" \
+"../../../../traffic_lights.srcs/sources_1/new/clock_divider.v" \
+"../../../../traffic_lights.srcs/sources_1/new/refreshcounter.v" \
+"../../../../traffic_lights.srcs/sources_1/new/top_7LED.v" \
+"../../../../traffic_lights.srcs/sim_1/new/testbench_7led.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

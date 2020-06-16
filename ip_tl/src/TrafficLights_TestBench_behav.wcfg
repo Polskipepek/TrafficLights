@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TrafficLights_TestBench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TrafficLights_TestBench" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="950000fs"></ZoomStartTime>
+      <ZoomEndTime time="2002312fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/TrafficLights_TestBench/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TrafficLights_TestBench/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TrafficLights_TestBench/ce" type="logic">
+      <obj_property name="ElementShortName">ce</obj_property>
+      <obj_property name="ObjectShortName">ce</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TrafficLights_TestBench/up_down" type="logic">
+      <obj_property name="ElementShortName">up_down</obj_property>
+      <obj_property name="ObjectShortName">up_down</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TrafficLights_TestBench/counter" type="array">
+      <obj_property name="ElementShortName">counter[5:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TrafficLights_TestBench/lights" type="array">
+      <obj_property name="ElementShortName">lights[5:0]</obj_property>
+      <obj_property name="ObjectShortName">lights[5:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <wvobject fp_name="/TrafficLights_TestBench/lights[5]" type="logic">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+         <obj_property name="CustomSignalColor">#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TrafficLights_TestBench/lights[4]" type="logic">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TrafficLights_TestBench/lights[3]" type="logic">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TrafficLights_TestBench/lights[2]" type="logic">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+         <obj_property name="CustomSignalColor">#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TrafficLights_TestBench/lights[1]" type="logic">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TrafficLights_TestBench/lights[0]" type="logic">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TrafficLights_TestBench/lights[5]" type="logic">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TrafficLights_TestBench/lights[4]" type="logic">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TrafficLights_TestBench/lights[3]" type="logic">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TrafficLights_TestBench/lights[2]" type="logic">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TrafficLights_TestBench/lights[1]" type="logic">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/TrafficLights_TestBench/lights[0]" type="logic">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/TrafficLights_TestBench/timeLeftNS" type="array">
+      <obj_property name="ElementShortName">timeLeftNS[4:0]</obj_property>
+      <obj_property name="ObjectShortName">timeLeftNS[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TrafficLights_TestBench/timeLeftEW" type="array">
+      <obj_property name="ElementShortName">timeLeftEW[4:0]</obj_property>
+      <obj_property name="ObjectShortName">timeLeftEW[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TrafficLights_TestBench/greenLightTime" type="array">
+      <obj_property name="ElementShortName">greenLightTime[4:0]</obj_property>
+      <obj_property name="ObjectShortName">greenLightTime[4:0]</obj_property>
+   </wvobject>
+</wave_config>

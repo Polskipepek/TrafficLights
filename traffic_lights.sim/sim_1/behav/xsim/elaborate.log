@@ -1,9 +1,104 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto e2c0bdda26fe49e894a8fa0833eafc1e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TrafficLights_TestBench_behav xil_defaultlib.TrafficLights_TestBench xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto e2c0bdda26fe49e894a8fa0833eafc1e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot TrafficLights_TestBench_behav xil_defaultlib.TrafficLights_TestBench xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 1 for port 'counter' [C:/Vivado/traffic_lights/traffic_lights.srcs/sim_1/new/TrafficLights_TestBench.v:13]
+WARNING: [VRFC 10-5021] port 'bram_enable' is not connected on this instance [C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/sim/design_tf.v:121]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module xil_defaultlib.CounterDesign
+Compiling module xil_defaultlib.TrafficLightsDesign
+Compiling module xil_defaultlib.TrafficLights
+Compiling module xil_defaultlib.design_tf_TrafficLights_0_0
+Compiling module xil_defaultlib.bin2digit2
+Compiling module xil_defaultlib.design_tf_bin2digit2_0_0
+Compiling module xil_defaultlib.design_tf_bin2digit2_0_1
+Compiling module xil_defaultlib.decoder
+Compiling module xil_defaultlib.design_tf_decoder_0_0
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="111111110000000011...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000101010100000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000101010100000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000101010100000...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="000000000001010100...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="000000000010101000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="10111111101111001000...]
+Compiling architecture ram64m_v of entity unisim.RAM64M [ram64m_default]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="011010010110100101...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111000000001111...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="111111111111111111...]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fd_v of entity unisim.FD [fd_default]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="000000001000001100...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="000000000001000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000000...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="110011000011001111...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="01011010001111001111...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="011101110111011100...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="000000000000000011...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111111...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="111111111111111100...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="000000111100101000...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="011101110000100000...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="110100000000000000...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="000000000000000100...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="110000001100110000...]
+Compiling architecture fdr_v of entity unisim.FDR [fdr_default]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="100000000000000000...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="010000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000100000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="10101100101011001111...]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="000000000000000000...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="01101001100101101001...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111111111111111010...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="001100110011001110...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="101000101000000000...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="000000000000000000...]
+Compiling architecture lut6_2_v of entity unisim.LUT6_2 [\LUT6_2(init="000000000000000000...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111011111111110000...]
+Compiling architecture ram32m_v of entity unisim.RAM32M [ram32m_default]
+Compiling architecture low_level_definition of entity xil_defaultlib.kcpsm6 [kcpsm6_default]
+Compiling architecture design_tf_kcpsm6_0_0_arch of entity xil_defaultlib.design_tf_kcpsm6_0_0 [design_tf_kcpsm6_0_0_default]
+Compiling module xil_defaultlib.lightstoleds
+Compiling module xil_defaultlib.design_tf_lightstoleds_0_0
+Compiling module xil_defaultlib.mux2_1
+Compiling module xil_defaultlib.design_tf_mux2_1_0_0
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(INITP_00=256'b010100010...
+Compiling module xil_defaultlib.pamiec_procesora
+Compiling module xil_defaultlib.design_tf_pamiec_procesora_0_2
+Compiling module xil_defaultlib.clock_divider
+Compiling module xil_defaultlib.refreshcounter
+Compiling module xil_defaultlib.anode_control
+Compiling module xil_defaultlib.BCD_control
+Compiling module xil_defaultlib.BCD_to_cathodes
+Compiling module xil_defaultlib.top_7LED
+Compiling module xil_defaultlib.design_tf_top_7LED_0_4
+Compiling module xil_defaultlib.design_tf_top_7LED_1_1
+Compiling module xil_defaultlib.design_tf_top_7LED_2_1
+Compiling module xil_defaultlib.design_tf_top_7LED_3_1
+Compiling module xil_defaultlib.diode
+Compiling module xil_defaultlib.top_diode
+Compiling module xil_defaultlib.design_tf_top_diode_0_0
+Compiling module xil_defaultlib.design_tf_top_diode_1_0
+Compiling module xil_defaultlib.design_tf_top_diode_2_0
+Compiling module xil_defaultlib.design_tf_top_diode_3_0
+Compiling module xil_defaultlib.design_tf
+Compiling module xil_defaultlib.design_tf_wrapper
+Compiling module xil_defaultlib.TrafficLights_TestBench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TrafficLights_TestBench_behav

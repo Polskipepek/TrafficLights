@@ -1,1 +1,1 @@
--wto "e2c0bdda26fe49e894a8fa0833eafc1e" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "TrafficLights_TestBench_behav" "xil_defaultlib.TrafficLights_TestBench" "xil_defaultlib.glbl" -log "elaborate.log" 
+-wto "e2c0bdda26fe49e894a8fa0833eafc1e" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "TrafficLights_TestBench_behav" "xil_defaultlib.TrafficLights_TestBench" "xil_defaultlib.glbl" -log "elaborate.log" 

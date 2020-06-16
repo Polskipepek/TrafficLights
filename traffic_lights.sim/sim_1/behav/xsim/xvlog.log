@@ -1,0 +1,72 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/5e38/src/CounterDesign.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CounterDesign
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/5e38/src/TrafficLightsDesign.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TrafficLightsDesign
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/5e38/src/TrafficLights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TrafficLights
+INFO: [VRFC 10-2458] undeclared symbol up_down, assumed default net type wire [C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/5e38/src/TrafficLights.v:22]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_TrafficLights_0_0/sim/design_tf_TrafficLights_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_TrafficLights_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/8b49/src/diode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module diode
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'o_number' is not allowed [C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/8b49/src/diode.v:4]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/8b49/src/diode_clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'refresh_clock' is not allowed [C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/8b49/src/diode_clock_divider.v:9]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/8b49/src/top_diode.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_diode
+INFO: [VRFC 10-2458] undeclared symbol counter, assumed default net type wire [C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/8b49/src/top_diode.v:4]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_top_diode_0_0/sim/design_tf_top_diode_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_top_diode_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_top_diode_1_0/sim/design_tf_top_diode_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_top_diode_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_top_diode_2_0/sim/design_tf_top_diode_2_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_top_diode_2_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_top_diode_3_0/sim/design_tf_top_diode_3_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_top_diode_3_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/2cf6/src/bin2digit2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bin2digit2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_bin2digit2_0_0/sim/design_tf_bin2digit2_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_bin2digit2_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_bin2digit2_0_1/sim/design_tf_bin2digit2_0_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_bin2digit2_0_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/d768/src/lightstoleds.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lightstoleds
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_lightstoleds_0_0/sim/design_tf_lightstoleds_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_lightstoleds_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/3e1b/src/decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_decoder_0_0/sim/design_tf_decoder_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_decoder_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/a0d1/src/mux2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_mux2_1_0_0/sim/design_tf_mux2_1_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_mux2_1_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/e390/src/pamiec_procesora.PICO6.2k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pamiec_procesora
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_pamiec_procesora_0_2/sim/design_tf_pamiec_procesora_0_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_pamiec_procesora_0_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/sim/design_tf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/a8ae/src/BCD_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BCD_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/a8ae/src/BCD_to_cathodes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BCD_to_cathodes
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/a8ae/src/anode_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module anode_control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/a8ae/src/refreshcounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module refreshcounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ipshared/a8ae/src/top_7LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_7LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_top_7LED_0_4/sim/design_tf_top_7LED_0_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_top_7LED_0_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_top_7LED_1_1/sim/design_tf_top_7LED_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_top_7LED_1_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_top_7LED_2_1/sim/design_tf_top_7LED_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_top_7LED_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.ip_user_files/bd/design_tf/ip/design_tf_top_7LED_3_1/sim/design_tf_top_7LED_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_top_7LED_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.srcs/sources_1/bd/design_tf/hdl/design_tf_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_tf_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado/traffic_lights/traffic_lights.srcs/sim_1/new/TrafficLights_TestBench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TrafficLights_TestBench

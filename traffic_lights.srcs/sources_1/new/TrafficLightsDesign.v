@@ -1,21 +1,24 @@
 `timescale 1ns / 1ps
 
-module TrafficLightsDesign(counter, rst, ce, lights);  
-    
-    parameter   _lightsWidth = 6,
-                _counterWidth = 6;
+module TrafficLightsDesign(counter, rst, ce, lights, greenLightTime, timeLeftNS, timeLeftEW);  
 
-    reg [_lightsWidth-1:0] lights;
-    
-    input wire counter;
+    parameter   _lightsWidth = 6,
+                _counterWidth = 6,
+                _greenLightTimeWidth = 6,
+                _timeLeftWidth = 7;
+  
+    input wire [_greenLightTimeWidth-1:0] greenLightTime;
+    input wire [_counterWidth-1:0] counter;
     input wire rst;
     input wire ce;
     
     reg[2:0] state;
     reg[2:0] state_ce;
-    reg[3:0] count;
+    reg[5:0] count;
     
-    output lights;
+    output reg [_lightsWidth-1:0] lights;
+    output reg [_timeLeftWidth-1:0] timeLeftNS;
+    output reg [_timeLeftWidth-1:0] timeLeftEW;
 
     parameter S0 = 3'b000, S1 =3'b001, S2 = 3'b010,
               S3 = 3'b011, S4 = 3'b100, S5 = 3'b101,
@@ -23,10 +26,12 @@ module TrafficLightsDesign(counter, rst, ce, lights);
               
     parameter CE0 = 3'b000, CE1 = 3'b010;
      
-    parameter SEC5 = 4'b1111, SEC1 = 4'b0011; 
+    parameter SEC5 = 5'b01111, SEC1 = 5'b00011, SEC6_5 = 5'b10100; 
     
     initial begin
-        lights<=6'b000000;
+        lights <= 6'b000000;
+        timeLeftNS <= 0;
+        timeLeftEW <= 0;
     end
        
     always @(posedge counter)begin
@@ -34,75 +39,108 @@ module TrafficLightsDesign(counter, rst, ce, lights);
             if (rst == 1)begin
                 state <= S0;
                 count <= 0;
+                timeLeftNS <= 0;
                 end
             else
                 case(state)
                     S0: if(count < SEC1) begin
                         state <= S0;
                         count <= count + 1;
+                        timeLeftNS <= timeLeftNS - 1;
+                        timeLeftEW <= timeLeftEW - 1;
                         end
                     else begin
                         state <= S1;
                         count <= 0;
+                        timeLeftNS <= timeLeftNS - 1;
+                        timeLeftEW <= greenLightTime;
                     end
-                    S1: if(count < SEC5) begin
+                    S1: if(count < greenLightTime) begin
                         state <= S1;
                         count <= count + 1;
+                        timeLeftNS <= timeLeftNS - 1;
+                        timeLeftEW <= timeLeftEW - 1;
                         end
                     else begin
                         state <= S2;
                         count <= 0;
+                    	timeLeftNS <= timeLeftNS - 1;
+                        timeLeftEW <= 0;
                         end
                     S2: if(count < SEC1) begin
                         state <= S2;
                         count <= count + 1;
+                        timeLeftNS <= timeLeftNS - 1;
+                        timeLeftEW <= 0;
                         end
                     else begin
                         state <= S3;
                         count <= 0;
+                        timeLeftNS <= timeLeftNS - 1;
+                        timeLeftEW <= greenLightTime + SEC6_5 ;
                         end 
                     S3: if(count < SEC1) begin
-                         state <= S3;
-                         count <= count + 1;
+                        state <= S3;
+                        count <= count + 1;
+                        timeLeftNS <= timeLeftNS - 1;
+                        timeLeftEW <= timeLeftEW - 1;
                         end
                     else begin
                         state <= S4;
                         count <= 0;
+                        timeLeftNS <= timeLeftNS - 1;
+                        timeLeftEW <= timeLeftEW - 1;
                         end
                     S4: if(count < SEC1) begin
                         state <= S4;
                         count <= count + 1;
+                   	    timeLeftNS <= timeLeftNS - 1;
+	                    timeLeftEW <= timeLeftEW - 1;
                         end 
                     else begin
                         state <= S5;
                         count <= 0;
+                        timeLeftNS <= greenLightTime;
+                        timeLeftEW <= timeLeftEW - 1;
                         end
-                    S5: if(count < SEC5)
+                    S5: if(count < greenLightTime)
                         begin
                         state <= S5;
                         count <= count + 1;
+                        timeLeftNS <= timeLeftNS - 1;
+                        timeLeftEW <= timeLeftEW - 1;
                         end
                     else begin
                         state <= S6;
                         count <= 0;
+                        timeLeftNS <= 0;
+                        timeLeftEW <= timeLeftEW - 1;
                         end
                     S6: if(count < SEC1)
                         begin
                         state <= S6;
                         count <= count + 1;
-                        end 
+                        timeLeftNS <= 0;
+                        timeLeftEW <= timeLeftEW - 1;
+                        end
                     else begin
                         state <= S7;
                         count <= 0;
-                        end
+                        timeLeftNS <= greenLightTime + SEC6_5 ;
+                        timeLeftEW <= timeLeftEW - 1;
+                            end
                     S7: if(count < SEC1)
                         begin
                         state <= S7;
                         count <= count + 1;
+                        timeLeftNS <= timeLeftNS - 1;
+                        timeLeftEW <= timeLeftEW - 1;
                         end
                     else begin
                         state <= S0;
                         count <= 0;
+                        timeLeftNS <= timeLeftNS - 1;
+                        timeLeftEW <= timeLeftEW - 1;
                         end 
                     default state <= S0;
                 

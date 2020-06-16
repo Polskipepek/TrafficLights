@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../traffic_lights.srcs/sources_1/imports/Verilog Hajduk/serial_clock.v" \
+"../../../../traffic_lights.srcs/sources_1/imports/Verilog Hajduk/serial_rx.v" \
+"../../../../traffic_lights.srcs/sources_1/imports/Verilog Hajduk/serial_tx.v" \
+"../../../../traffic_lights.srcs/sources_1/imports/Verilog Hajduk/serial_tx_fifo.v" \
+"../../../../traffic_lights.srcs/sources_1/imports/Verilog Hajduk/pblaze_downloader.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

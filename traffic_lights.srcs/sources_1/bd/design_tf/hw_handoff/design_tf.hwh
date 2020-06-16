@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun 15 13:04:53 2020" VIVADOVERSION="2019.2">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="design_tf" PACKAGE="clg400" SPEEDGRADE="-3"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="TrafficLights_0" PORT="clk"/>
+        <CONNECTION INSTANCE="top_diode_0" PORT="clk"/>
+        <CONNECTION INSTANCE="top_diode_1" PORT="clk"/>
+        <CONNECTION INSTANCE="top_diode_2" PORT="clk"/>
+        <CONNECTION INSTANCE="top_diode_3" PORT="clk"/>
+        <CONNECTION INSTANCE="kcpsm6_0" PORT="clk"/>
+        <CONNECTION INSTANCE="mux2_1_0" PORT="clk"/>
+        <CONNECTION INSTANCE="pamiec_procesora_0" PORT="clk"/>
+        <CONNECTION INSTANCE="decoder_0" PORT="clk"/>
+        <CONNECTION INSTANCE="top_7LED_3" PORT="clk"/>
+        <CONNECTION INSTANCE="top_7LED_2" PORT="clk"/>
+        <CONNECTION INSTANCE="top_7LED_0" PORT="clk"/>
+        <CONNECTION INSTANCE="top_7LED_1" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="LEDs0" RIGHT="0" SIGIS="undef" SIGNAME="top_diode_0_LEDs">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_diode_0" PORT="LEDs"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="LEDs1" RIGHT="0" SIGIS="undef" SIGNAME="top_diode_1_LEDs">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_diode_1" PORT="LEDs"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="LEDs2" RIGHT="0" SIGIS="undef" SIGNAME="top_diode_2_LEDs">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_diode_2" PORT="LEDs"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="LEDs3" RIGHT="0" SIGIS="undef" SIGNAME="top_diode_3_LEDs">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_diode_3" PORT="LEDs"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="cathode0" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_0_cathode">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_7LED_0" PORT="cathode"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="anode0" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_2_anode">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_7LED_2" PORT="anode"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="cathode1" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_2_cathode">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_7LED_2" PORT="cathode"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="cathode2" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_1_cathode">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_7LED_1" PORT="cathode"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="cathode3" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_3_cathode">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_7LED_3" PORT="cathode"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="anode1" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_0_anode">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_7LED_0" PORT="anode"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="anode2" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_1_anode">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_7LED_1" PORT="anode"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="anode3" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_3_anode">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_7LED_3" PORT="anode"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="TrafficLights_0" PORT="rst"/>
+        <CONNECTION INSTANCE="kcpsm6_0" PORT="reset"/>
+        <CONNECTION INSTANCE="mux2_1_0" PORT="rst"/>
+        <CONNECTION INSTANCE="decoder_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ce" SIGIS="undef" SIGNAME="External_Ports_ce">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="mux2_1_0" PORT="ce"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="5" NAME="greenLightTime" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_greenLightTime">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="mux2_1_0" PORT="greenLightTime"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pamiec_procesora_0" PORT="enable"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="2" FULLNAME="/TrafficLights_0" HWVERSION="1.0" INSTANCE="TrafficLights_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="TrafficLights" VLNV="xilinx.com:user:TrafficLights:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="_lightsWidth" VALUE="6"/>
+        <PARAMETER NAME="_counterWidth" VALUE="6"/>
+        <PARAMETER NAME="_greenLightTimeWidth" VALUE="6"/>
+        <PARAMETER NAME="_timeLeftWidth" VALUE="7"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_TrafficLights_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ce" SIGIS="undef" SIGNAME="decoder_0_ce">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="ce"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="lights" RIGHT="0" SIGIS="undef" SIGNAME="TrafficLights_0_lights">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="lightstoleds_0" PORT="lights"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="greenLightTime" RIGHT="0" SIGIS="undef" SIGNAME="decoder_0_greenLightTime">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="greenLightTime"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="timeLeftNS" RIGHT="0" SIGIS="undef" SIGNAME="TrafficLights_0_timeLeftNS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bin2digit2_0" PORT="timeleftbin"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="timeLeftEW" RIGHT="0" SIGIS="undef" SIGNAME="TrafficLights_0_timeLeftEW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bin2digit2_1" PORT="timeleftbin"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/bin2digit2_0" HWVERSION="1.0" INSTANCE="bin2digit2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="bin2digit2" VLNV="xilinx.com:user:bin2digit2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_bin2digit2_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="6" NAME="timeleftbin" RIGHT="0" SIGIS="undef" SIGNAME="TrafficLights_0_timeLeftNS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TrafficLights_0" PORT="timeLeftNS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="timeleft" RIGHT="0" SIGIS="undef" SIGNAME="bin2digit2_0_timeleft">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_7LED_0" PORT="switch"/>
+            <CONNECTION INSTANCE="top_7LED_2" PORT="switch"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/bin2digit2_1" HWVERSION="1.0" INSTANCE="bin2digit2_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="bin2digit2" VLNV="xilinx.com:user:bin2digit2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_bin2digit2_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="6" NAME="timeleftbin" RIGHT="0" SIGIS="undef" SIGNAME="TrafficLights_0_timeLeftEW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TrafficLights_0" PORT="timeLeftEW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="timeleft" RIGHT="0" SIGIS="undef" SIGNAME="bin2digit2_1_timeleft">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_7LED_3" PORT="switch"/>
+            <CONNECTION INSTANCE="top_7LED_1" PORT="switch"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/decoder_0" HWVERSION="1.0" INSTANCE="decoder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="decoder" VLNV="xilinx.com:user:decoder:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_decoder_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="out_port" RIGHT="0" SIGIS="undef" SIGNAME="kcpsm6_0_out_port">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="kcpsm6_0" PORT="out_port"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="port_id" RIGHT="0" SIGIS="undef" SIGNAME="kcpsm6_0_port_id">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="kcpsm6_0" PORT="port_id"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="write_strobe" SIGIS="undef" SIGNAME="kcpsm6_0_write_strobe">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="kcpsm6_0" PORT="write_strobe"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ce" SIGIS="undef" SIGNAME="decoder_0_ce">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TrafficLights_0" PORT="ce"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="greenLightTime" RIGHT="0" SIGIS="undef" SIGNAME="decoder_0_greenLightTime">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TrafficLights_0" PORT="greenLightTime"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/kcpsm6_0" HWVERSION="1.0" INSTANCE="kcpsm6_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="kcpsm6" VLNV="xilinx.com:user:kcpsm6:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="hwbuild" VALUE="&quot;00000000&quot;"/>
+        <PARAMETER NAME="interrupt_vector" VALUE="0x3FF"/>
+        <PARAMETER NAME="scratch_pad_memory_size" VALUE="64"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_kcpsm6_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="address" RIGHT="0" SIGIS="undef" SIGNAME="kcpsm6_0_address">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pamiec_procesora_0" PORT="address"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="17" NAME="instruction" RIGHT="0" SIGIS="undef" SIGNAME="pamiec_procesora_0_instruction">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pamiec_procesora_0" PORT="instruction"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="bram_enable" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="7" NAME="in_port" RIGHT="0" SIGIS="undef" SIGNAME="mux2_1_0_in_port">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mux2_1_0" PORT="in_port"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="out_port" RIGHT="0" SIGIS="undef" SIGNAME="kcpsm6_0_out_port">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="out_port"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="port_id" RIGHT="0" SIGIS="undef" SIGNAME="kcpsm6_0_port_id">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="mux2_1_0" PORT="port_id"/>
+            <CONNECTION INSTANCE="decoder_0" PORT="port_id"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="write_strobe" SIGIS="undef" SIGNAME="kcpsm6_0_write_strobe">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="decoder_0" PORT="write_strobe"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="k_write_strobe" SIGIS="undef"/>
+        <PORT DIR="O" NAME="read_strobe" SIGIS="undef"/>
+        <PORT DIR="I" NAME="interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
+        <PORT DIR="O" NAME="interrupt_ack" SIGIS="undef"/>
+        <PORT DIR="I" NAME="sleep" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="3" FULLNAME="/lightstoleds_0" HWVERSION="1.0" INSTANCE="lightstoleds_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="lightstoleds" VLNV="xilinx.com:user:lightstoleds:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_lightstoleds_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="5" NAME="lights" RIGHT="0" SIGIS="undef" SIGNAME="TrafficLights_0_lights">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="TrafficLights_0" PORT="lights"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="lightNS" RIGHT="0" SIGIS="undef" SIGNAME="lightstoleds_0_lightNS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_diode_0" PORT="light"/>
+            <CONNECTION INSTANCE="top_diode_2" PORT="light"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="lightEW" RIGHT="0" SIGIS="undef" SIGNAME="lightstoleds_0_lightEW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="top_diode_1" PORT="light"/>
+            <CONNECTION INSTANCE="top_diode_3" PORT="light"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/mux2_1_0" HWVERSION="1.0" INSTANCE="mux2_1_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="mux2_1" VLNV="xilinx.com:user:mux2_1:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_mux2_1_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="port_id" RIGHT="0" SIGIS="undef" SIGNAME="kcpsm6_0_port_id">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="kcpsm6_0" PORT="port_id"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ce" SIGIS="undef" SIGNAME="External_Ports_ce">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ce"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="greenLightTime" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_greenLightTime">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="greenLightTime"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="in_port" RIGHT="0" SIGIS="undef" SIGNAME="mux2_1_0_in_port">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="kcpsm6_0" PORT="in_port"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/pamiec_procesora_0" HWVERSION="1.0" INSTANCE="pamiec_procesora_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pamiec_procesora" VLNV="xilinx.com:user:pamiec_procesora:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_pamiec_procesora_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="11" NAME="address" RIGHT="0" SIGIS="undef" SIGNAME="kcpsm6_0_address">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="kcpsm6_0" PORT="address"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="17" NAME="instruction" RIGHT="0" SIGIS="undef" SIGNAME="pamiec_procesora_0_instruction">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="kcpsm6_0" PORT="instruction"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/top_7LED_0" HWVERSION="1.0" INSTANCE="top_7LED_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="top_7LED" VLNV="xilinx.com:user:top_7LED:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_top_7LED_0_4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="switch" RIGHT="0" SIGIS="undef" SIGNAME="bin2digit2_0_timeleft">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bin2digit2_0" PORT="timeleft"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="cathode" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_0_cathode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="cathode0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="anode" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_0_anode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="anode1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/top_7LED_1" HWVERSION="1.0" INSTANCE="top_7LED_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="top_7LED" VLNV="xilinx.com:user:top_7LED:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_top_7LED_1_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="switch" RIGHT="0" SIGIS="undef" SIGNAME="bin2digit2_1_timeleft">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bin2digit2_1" PORT="timeleft"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="cathode" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_1_cathode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="cathode2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="anode" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_1_anode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="anode2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/top_7LED_2" HWVERSION="1.0" INSTANCE="top_7LED_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="top_7LED" VLNV="xilinx.com:user:top_7LED:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_top_7LED_2_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="switch" RIGHT="0" SIGIS="undef" SIGNAME="bin2digit2_0_timeleft">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bin2digit2_0" PORT="timeleft"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="cathode" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_2_cathode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="cathode1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="anode" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_2_anode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="anode0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/top_7LED_3" HWVERSION="1.0" INSTANCE="top_7LED_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="top_7LED" VLNV="xilinx.com:user:top_7LED:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_top_7LED_3_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="switch" RIGHT="0" SIGIS="undef" SIGNAME="bin2digit2_1_timeleft">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bin2digit2_1" PORT="timeleft"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="cathode" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_3_cathode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="cathode3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="anode" RIGHT="0" SIGIS="undef" SIGNAME="top_7LED_3_anode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="anode3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/top_diode_0" HWVERSION="1.0" INSTANCE="top_diode_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="top_diode" VLNV="xilinx.com:user:top_diode:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_top_diode_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="light" RIGHT="0" SIGIS="undef" SIGNAME="lightstoleds_0_lightNS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="lightstoleds_0" PORT="lightNS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="LEDs" RIGHT="0" SIGIS="undef" SIGNAME="top_diode_0_LEDs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LEDs0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/top_diode_1" HWVERSION="1.0" INSTANCE="top_diode_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="top_diode" VLNV="xilinx.com:user:top_diode:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_top_diode_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="light" RIGHT="0" SIGIS="undef" SIGNAME="lightstoleds_0_lightEW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="lightstoleds_0" PORT="lightEW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="LEDs" RIGHT="0" SIGIS="undef" SIGNAME="top_diode_1_LEDs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LEDs1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/top_diode_2" HWVERSION="1.0" INSTANCE="top_diode_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="top_diode" VLNV="xilinx.com:user:top_diode:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_top_diode_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="light" RIGHT="0" SIGIS="undef" SIGNAME="lightstoleds_0_lightNS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="lightstoleds_0" PORT="lightNS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="LEDs" RIGHT="0" SIGIS="undef" SIGNAME="top_diode_2_LEDs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LEDs2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/top_diode_3" HWVERSION="1.0" INSTANCE="top_diode_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="top_diode" VLNV="xilinx.com:user:top_diode:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_tf_top_diode_3_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="light" RIGHT="0" SIGIS="undef" SIGNAME="lightstoleds_0_lightEW">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="lightstoleds_0" PORT="lightEW"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="LEDs" RIGHT="0" SIGIS="undef" SIGNAME="top_diode_3_LEDs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="LEDs3"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
